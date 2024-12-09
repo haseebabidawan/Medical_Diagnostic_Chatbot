@@ -1,0 +1,13 @@
+prefix=D:/GEN_AI/Projects_and_Github/Medical_Diagnostic_Chatbot/venv/Library
+exec_prefix=D:/GEN_AI/Projects_and_Github/Medical_Diagnostic_Chatbot/venv/Library
+libdir=D:/GEN_AI/Projects_and_Github/Medical_Diagnostic_Chatbot/venv/Library/lib
+sharedlibdir=D:/GEN_AI/Projects_and_Github/Medical_Diagnostic_Chatbot/venv/Library/lib
+includedir=D:/GEN_AI/Projects_and_Github/Medical_Diagnostic_Chatbot/venv/Library/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}

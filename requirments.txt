@@ -1,0 +1,6 @@
+google.generativeai
+streamlit
+python-dotenv
+groq
+pandas
+numpy
