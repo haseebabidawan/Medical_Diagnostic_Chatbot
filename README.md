@@ -147,20 +147,6 @@ _Generated detailed diagnostic report._
 ![Simplified Explanation](assets/EXPLAIN.PNG)
 _Easily understandable explanations using GROQ AI._
 
----
-
-## Images Used
-
-*   **Title Banner**:
-    ![Title Banner](assets/Title.PNG)
-
-*   **GROQ Logo**:
-    ![GROQ Logo](https://raw.githubusercontent.com/RMNCLDYO/groq-ai-toolkit/main/.github/groq-logo.png)
-
-*   **Google GEMINI Logo**:
-    ![Google GEMINI Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Google_Gemini_logo.svg/1200px-Google_Gemini_logo.svg.png)
-
----
 
 ## License
 
