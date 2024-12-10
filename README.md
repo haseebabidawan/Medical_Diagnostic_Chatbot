@@ -135,15 +135,15 @@ This project seeks to bridge the gap in healthcare by delivering efficient, accu
 ## Screenshots
 
 ### Application in Action
-![Application in Action](assets/app-screenshot.png)
+![Application in Action](assets/Application.PNG)
 _Upload an image, analyze it, and simplify the results with ELI5._
 
 ### Detailed Analysis
-![Detailed Analysis](assets/detailed-analysis.png)
+![Detailed Analysis](assets/Application.PNG)
 _Generated detailed diagnostic report._
 
 ### Simplified Explanation (ELI5)
-![Simplified Explanation](assets/eli5-explanation.png)
+![Simplified Explanation](assets/EXPLAIN.PNG)
 _Easily understandable explanations using GROQ AI._
 
 ---
@@ -151,13 +151,13 @@ _Easily understandable explanations using GROQ AI._
 ## Images Used
 
 *   **Title Banner**:
-    ![Title Banner](assets/title-image.png)
+    ![Title Banner](assets/title.PNG)
 
 *   **GROQ Logo**:
-    ![GROQ Logo](assets/groq-logo.png)
+    ![GROQ Logo](https://raw.githubusercontent.com/RMNCLDYO/groq-ai-toolkit/main/.github/groq-logo.png)
 
 *   **Google GEMINI Logo**:
-    ![Google GEMINI Logo](assets/gemini-logo.png)
+    ![Google GEMINI Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Google_Gemini_logo.svg/1200px-Google_Gemini_logo.svg.png)
 
 ---
 
