@@ -50,7 +50,8 @@ safety_settings = [
 ]
 
 # Sample prompt for image analysis
-sample_prompt = """
+sample_prompt = [
+    """
 You are a highly skilled expert in medical image analysis, and your task is to examine medical images to identify any health-related issues and generate a detailed response base on below bullets points e.g(1,2,3,-). 
 You are working for a renowned hospital and your expertise is crucial in guiding clinical decisions.
 
@@ -73,6 +74,7 @@ You are working for a renowned hospital and your expertise is crucial in guiding
 
 Please proceed with this structured format.
 """
+]
 
 
   # Initialize the Google Generative AI model
@@ -90,13 +92,13 @@ st.write("Upload a medical image to receive an AI-powered analysis.")
 
 # File upload section
 uploaded_file = st.file_uploader("Upload a Medical Image", type=["jpg", "jpeg", "png"])
-
 if uploaded_file:
     with tempfile.NamedTemporaryFile(delete=False, suffix=os.path.splitext(uploaded_file.name)[1]) as temp_file:
         temp_file.write(uploaded_file.getvalue())
         st.session_state['uploaded_file'] = temp_file.name
         st.image(uploaded_file, caption="Uploaded Image")
         
+
         
 ana_button = st.button("Analyze Image")       
 # Analyze button
@@ -116,28 +118,31 @@ if ana_button:
             image_parts[0],
             sample_prompt[0],
         ]
-    print(prompt_parts)   
         #generate response
         
     gen_response = model.generate_content(prompt_parts)
-        
+    
         
     if gen_response:
             st.title('Detailed analysis based on the uploaded image')
-            st.write(gen_response.text)
+            # st.write(gen_response.text)
+            st.session_state['result'] =  gen_response.text
+            st.markdown(st.session_state['result'], unsafe_allow_html=False)  
+    else:
+        st.error("Failed to generate a response. Please try again.")
             
     
     
 
 
 # Function to simplify the explanation (ELI5)
-def explain_like_5(gen_response):
-    eli5_prompt = "Explain the following information to a 5-year-old: \n" + gen_response
+def explain_like_5(gen_response_text):
+    eli5_prompt = "Explain the following information to a 5-year-old:\n" + gen_response_text
     messages = [{"role": "user", "content": eli5_prompt}]
-    
-    # Generate simplified explanation using the Groq model (ELI5)
+
+    # Generate simplified explanation
     response = client.chat.completions.create(
-        model="llama-3.1-8b-instant",  # Specify the LLM model for ELI5
+        model="llama-3.1-8b-instant",
         messages=messages,
         max_tokens=2500
     )
@@ -145,15 +150,14 @@ def explain_like_5(gen_response):
 
 
 
+# ELI5 Explanation Section
+if 'result' in st.session_state and st.session_state['result']:
+    st.write("---")
+    st.info("Below you have an option to understand in simpler terms.")
+    if st.radio("Explain in Easy Words?", ('No', 'Yes')) == 'Yes':
+        simplified_explanation = explain_like_5(st.session_state['result'])
+        st.markdown(simplified_explanation, unsafe_allow_html=True)
 
-
-
-# Option to simplify the explanation
-if st.session_state.get('result'):
-    st.info("Would you like a simplified explanation?")
-    if st.radio("Explain Like I'm 5 (ELI5)?", ["No", "Yes"]) == "Yes":
-        simplified = explain_like_5(st.session_state['result'])
-        st.markdown(simplified, unsafe_allow_html=True)
 
 # Footer
 st.write("---")
