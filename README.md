@@ -1,4 +1,11 @@
 # Medical Diagnosis Chatbot using Multi-Modal LLM 👨‍⚕️ 🩺 🏥
+---
+
+## Overview
+
+The **Medical Diagnosis Chatbot** is an advanced AI-powered application designed to analyze medical images (like X-rays or scans) and generate detailed diagnostic reports. It uses **Google GEMINI** and **GROQ AI** models for high-quality analysis and simplified explanations in layman's terms. The application ensures precision in its analysis and guides users with actionable insights while including disclaimers for professional consultations.
+
+---
 
 ![Application Banner](https://images.ctfassets.net/wt9spzbmicfl/2cfibIly3Pj4OuM4TWkUYw/1cf02a6a31bc67a93b8042d0babfc37c/AI_and_Medical_Diagnosis.webp)  
 *A cutting-edge medical chatbot leveraging GEMINI and GROQ AI for medical image analysis and simplified explanations.*
@@ -15,13 +22,7 @@
 - [Screenshots](#screenshots)
 - [License](#license)
 
----
 
-## Overview
-
-The **Medical Diagnosis Chatbot** is an advanced AI-powered application designed to analyze medical images (like X-rays or scans) and generate detailed diagnostic reports. It uses **Google GEMINI** and **GROQ AI** models for high-quality analysis and simplified explanations in layman's terms. The application ensures precision in its analysis and guides users with actionable insights while including disclaimers for professional consultations.
-
----
 
 ---
 ## Problem Statement
@@ -139,7 +140,7 @@ This project seeks to bridge the gap in healthcare by delivering efficient, accu
 _Upload an image, analyze it, and simplify the results with ELI5._
 
 ### Detailed Analysis
-![Detailed Analysis](assets/Application.PNG)
+![Detailed Analysis](assets/In-Action.PNG)
 _Generated detailed diagnostic report._
 
 ### Simplified Explanation (ELI5)
@@ -151,7 +152,7 @@ _Easily understandable explanations using GROQ AI._
 ## Images Used
 
 *   **Title Banner**:
-    ![Title Banner](assets/title.PNG)
+    ![Title Banner](assets/Title.PNG)
 
 *   **GROQ Logo**:
     ![GROQ Logo](https://raw.githubusercontent.com/RMNCLDYO/groq-ai-toolkit/main/.github/groq-logo.png)
