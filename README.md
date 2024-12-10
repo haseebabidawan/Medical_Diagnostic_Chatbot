@@ -1,6 +1,6 @@
 # Medical Diagnosis Chatbot using Multi-Modal LLM 👨‍⚕️ 🩺 🏥
 
-![Application Banner](assets/title-image.png)  
+![Application Banner](https://images.ctfassets.net/wt9spzbmicfl/2cfibIly3Pj4OuM4TWkUYw/1cf02a6a31bc67a93b8042d0babfc37c/AI_and_Medical_Diagnosis.webp)  
 *A cutting-edge medical chatbot leveraging GEMINI and GROQ AI for medical image analysis and simplified explanations.*
 
 ---
